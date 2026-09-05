@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenLake — Open Source Society of IIT Bhilai</title>
+  
+  <!-- Zero-white-flash inline rules -->
+  <style>
+    html, body { background: #030712 !important; color: #ffffff; }
+  </style>
+
+  <!-- Google Fonts Fallback for Inter & Instrument Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+
+  <!-- Favicon (OpenLake SVG data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2338bdf8'%3E%3Cg transform='rotate(-30 12 12)'%3E%3Ccircle cx='7.3' cy='3.2' r='1.45'/%3E%3Crect x='5.5' y='4.7' width='3.6' height='14.6' rx='1.8'/%3E%3Crect x='14.9' y='4.7' width='3.6' height='14.6' rx='1.8'/%3E%3Ccircle cx='16.7' cy='20.8' r='1.45'/%3E%3C/g%3E%3C/svg%3E">
+
+  <!-- External Modular Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background:#030712;color:#fff">
+
+  <!-- Film Grain Overlay -->
+  <div class="grain"></div>
+
+  <!-- Hero Photo Background Mesh (Constant Dark Color) -->
+  <div class="hero-photo"></div>
+
+  <!-- Interactive Cursor Spotlight Glow -->
+  <div class="mouse-spotlight" id="mouse-spotlight"></div>
+
+  <!-- 3D Spinning Tesseract (4D Hypercube Projection) 1 -->
+  <div class="tesseract-container tesseract-1">
+    <div class="tesseract-3d">
+      <div class="cube-outer">
+        <div class="tesseract-face front"></div>
+        <div class="tesseract-face back"></div>
+        <div class="tesseract-face right"></div>
+        <div class="tesseract-face left"></div>
+        <div class="tesseract-face top"></div>
+        <div class="tesseract-face bottom"></div>
+      </div>
+      <div class="cube-inner">
+        <div class="tesseract-face front"></div>
+        <div class="tesseract-face back"></div>
+        <div class="tesseract-face right"></div>
+        <div class="tesseract-face left"></div>
+        <div class="tesseract-face top"></div>
+        <div class="tesseract-face bottom"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3D Spinning Tesseract (4D Hypercube Projection) 2 -->
+  <div class="tesseract-container tesseract-2">
+    <div class="tesseract-3d">
+      <div class="cube-outer">
+        <div class="tesseract-face front"></div>
+        <div class="tesseract-face back"></div>
+        <div class="tesseract-face right"></div>
+        <div class="tesseract-face left"></div>
+        <div class="tesseract-face top"></div>
+        <div class="tesseract-face bottom"></div>
+      </div>
+      <div class="cube-inner">
+        <div class="tesseract-face front"></div>
+        <div class="tesseract-face back"></div>
+        <div class="tesseract-face right"></div>
+        <div class="tesseract-face left"></div>
+        <div class="tesseract-face top"></div>
+        <div class="tesseract-face bottom"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Page Container -->
+  <div class="page">
+    
+    <!-- Mobile Menu Backdrop -->
+    <div class="menu-backdrop" id="menu-backdrop"></div>
+
+    <!-- Header Section -->
+    <header class="header">
+      <!-- Left Logo -->
+      <a href="#top" class="logo appear appear--scale" style="--d: 0.08s;" aria-label="OpenLake IIT Bhilai">
+        <svg class="logo-mark" viewBox="0 0 24 24" fill="currentColor">
+          <g transform="rotate(-30 12 12)">
+            <circle cx="7.3" cy="3.2" r="1.45" />
+            <rect x="5.5" y="4.7" width="3.6" height="14.6" rx="1.8" />
+            <rect x="14.9" y="4.7" width="3.6" height="14.6" rx="1.8" />
+            <circle cx="16.7" cy="20.8" r="1.45" />
+          </g>
+        </svg>
+        OpenLake<span class="logo-suffix">.iitb</span>
+      </a>
+
+      <!-- Center Primary Navigation -->
+      <nav id="site-nav" aria-label="Primary">
+        <a href="#benefits" class="nav-pill appear appear--scale" style="--d: 0.16s;">Benefits</a>
+        <a href="#how-it-works" class="nav-pill appear appear--soft" style="--d: 0.28s;">How It Works</a>
+        <a href="#faqs" class="nav-pill appear appear--scale" style="--d: 0.40s;">FAQs</a>
+        <a href="#join" class="nav-pill appear appear--soft" style="--d: 0.52s;">Join Us</a>
+      </nav>
+
+      <!-- Right Header CTA -->
+      <a href="#join" class="btn btn-solid header-cta appear appear--scale" style="--d: 0.34s;">
+        Join OpenLake
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="burger appear appear--scale" style="--d: 0.34s;" id="burger-btn" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+      </button>
+    </header>
+
+    <!-- Hero Main Section -->
+    <main class="hero" id="top">
+      <div class="hero-copy">
+        
+        <!-- Animated Badge -->
+        <div class="badge appear appear--pop" style="--d: 0.22s;">
+          <svg class="badge-star" viewBox="0 0 24 24">
+            <path d="M12 2.6C12.55 2.6 12.88 3.15 13.08 4.7c.62 4.7 1.52 5.6 6.22 6.22 1.55.2 2.1.53 2.1 1.08s-.55.88-2.1 1.08c-4.7.62-5.6 1.52-6.22 6.22-.2 1.55-.53 2.1-1.08 2.1s-.88-.55-1.08-2.1c-.62-4.7-1.52-5.6-6.22-6.22C3.15 12.88 2.6 12.55 2.6 12s.55-.88 2.1-1.08c4.7-.62 5.6-1.52 6.22-6.22C11.12 3.15 11.45 2.6 12 2.6Z"/>
+          </svg>
+          Open Source Society of IIT Bhilai
+        </div>
+
+        <!-- Masked Headline H1 -->
+        <h1>
+          <span class="headline-line appear appear--mask" style="--d: 0.42s;">
+            Build open source <em>for everyone</em>
+          </span>
+          <span class="headline-line appear appear--mask" style="--d: 0.62s;">
+            at IIT Bhilai &amp; beyond.
+          </span>
+        </h1>
+
+        <!-- Lede Paragraph -->
+        <p class="lede appear appear--soft" style="--d: 0.82s;">
+          Empowering student developers to collaborate, ship real-world software, host flagship hackathons like HelloWorld, and contribute to global open source ecosystems.
+        </p>
+
+        <!-- Hero Actions -->
+        <div class="hero-actions">
+          <a href="#join" class="btn btn-solid hero-btn appear appear--btn" style="--d: 0.96s;">
+            Get Involved
+          </a>
+          <a href="#benefits" class="btn btn-ghost hero-btn appear appear--side" style="--d: 1.10s;">
+            Explore Benefits
+          </a>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- SECTION 1: BENEFITS -->
+    <section class="section" id="benefits">
+      <div class="section-header scroll-reveal from-bottom">
+        <span class="section-tag">Benefits</span>
+        <h2 class="section-title">Why student devs <em>thrive</em> here</h2>
+        <p class="section-subtitle">Everything you need to step up from beginner scripts to industry-grade open source projects.</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Benefit 1: Fades in from Left with 3D Tilt -->
+        <div class="feature-card tilt-card scroll-reveal from-left">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+          </div>
+          <h3 class="feature-title">Real-World Repositories</h3>
+          <p class="feature-desc">Move beyond textbook snippets. Build full-stack web applications, developer CLI utilities, and DevOps automation scripts used right across campus.</p>
+        </div>
+
+        <!-- Benefit 2: Fades in from Right with 3D Tilt -->
+        <div class="feature-card tilt-card scroll-reveal from-right delay-1">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="feature-title">First-Year Mentorship</h3>
+          <p class="feature-desc">Zero experience needed. Seniors and maintainers host interactive bootcamps, code reviews, and pair-programming sessions to help you land your first merged PR.</p>
+        </div>
+
+        <!-- Benefit 3: Fades in from Left with 3D Tilt -->
+        <div class="feature-card tilt-card scroll-reveal from-left delay-2">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="feature-title">Hackathons &amp; Sprints</h3>
+          <p class="feature-desc">Participate in 24-hour flagship events like <em>HelloWorld</em>. Ship a complete live project over a single night with prizes, certificates, and recognition.</p>
+        </div>
+
+        <!-- Benefit 4: Fades in from Right with 3D Tilt -->
+        <div class="feature-card tilt-card scroll-reveal from-right delay-3">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          <h3 class="feature-title">GSoC &amp; Global Impact</h3>
+          <p class="feature-desc">Learn git hygiene, Linux environments, and open-source practices that directly prepare you for Google Summer of Code, Outreachy, and top tech roles.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: HOW IT WORKS -->
+    <section class="section" id="how-it-works">
+      <div class="section-header scroll-reveal from-bottom">
+        <span class="section-tag">Workflow</span>
+        <h2 class="section-title">How OpenLake <em>operates</em></h2>
+        <p class="section-subtitle">Four simple steps to transform from a curious student into a core project maintainer.</p>
+      </div>
+
+      <div class="process-list">
+        <!-- Step 1: Slide from Left with 3D Tilt -->
+        <div class="process-item tilt-card scroll-reveal from-left">
+          <div class="process-step">01</div>
+          <div>
+            <h3 class="feature-title">Find an Issue</h3>
+            <p class="feature-desc">Browse our public GitHub repositories for issues tagged with <code>good first issue</code> or <code>first-years-welcome</code>.</p>
+          </div>
+        </div>
+
+        <!-- Step 2: Slide from Right with 3D Tilt -->
+        <div class="process-item tilt-card scroll-reveal from-right delay-1">
+          <div class="process-step">02</div>
+          <div>
+            <h3 class="feature-title">Submit a Pull Request</h3>
+            <p class="feature-desc">Fork the repository, write clean modular code, and create your pull request. Core maintainers will provide constructive feedback.</p>
+          </div>
+        </div>
+
+        <!-- Step 3: Slide from Left with 3D Tilt -->
+        <div class="process-item tilt-card scroll-reveal from-left delay-2">
+          <div class="process-step">03</div>
+          <div>
+            <h3 class="feature-title">Compete in HelloWorld Hackathons</h3>
+            <p class="feature-desc">Team up for online 24-hour sprints designed exclusively for first-year IIT Bhilai students to build impactful tools overnight.</p>
+          </div>
+        </div>
+
+        <!-- Step 4: Slide from Right with 3D Tilt -->
+        <div class="process-item tilt-card scroll-reveal from-right delay-3">
+          <div class="process-step">04</div>
+          <div>
+            <h3 class="feature-title">Incubate Your Ideas</h3>
+            <p class="feature-desc">Got a cool project idea for campus or open source? Pitch it to OpenLake and assemble a contributor team to bring it to life.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FAQS -->
+    <section class="section" id="faqs">
+      <div class="section-header scroll-reveal from-bottom">
+        <span class="section-tag">Got Questions?</span>
+        <h2 class="section-title">Frequently asked <em>questions</em></h2>
+        <p class="section-subtitle">Everything you need to know about joining and contributing to OpenLake.</p>
+      </div>
+
+      <div class="faq-grid">
+        <!-- FAQ 1: Slide from Left with 3D Tilt -->
+        <div class="faq-card tilt-card scroll-reveal from-left">
+          <h4 class="faq-question">I'm a first-year with no coding background. Can I join?</h4>
+          <p class="faq-answer">Absolutely! OpenLake is designed to take you from scratch. Workshops, pair programming, and hackathons like <em>HelloWorld</em> are built specifically for first-year beginners.</p>
+        </div>
+
+        <!-- FAQ 2: Slide from Right with 3D Tilt -->
+        <div class="faq-card tilt-card scroll-reveal from-right delay-1">
+          <h4 class="faq-question">Do I need permission from seniors to build a project?</h4>
+          <p class="faq-answer">No! OpenLake promotes a flat, decentralized culture. Anyone can pitch an idea, open a pull request, or form a project team.</p>
+        </div>
+
+        <!-- FAQ 3: Slide from Left with 3D Tilt -->
+        <div class="faq-card tilt-card scroll-reveal from-left delay-2">
+          <h4 class="faq-question">What languages and stacks are used?</h4>
+          <p class="faq-answer">We maintain repositories in Python, JavaScript, TypeScript, React, Rust, C/C++, Docker, Go, and Shell scripts.</p>
+        </div>
+
+        <!-- FAQ 4: Slide from Right with 3D Tilt -->
+        <div class="faq-card tilt-card scroll-reveal from-right delay-3">
+          <h4 class="faq-question">How do I get official contributor access?</h4>
+          <p class="faq-answer">Once your first 2 PRs are merged into any official OpenLake repository, you automatically receive contributor status in the GitHub organization!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: JOIN US / COMMUNITY CTA -->
+    <section class="section" id="join">
+      <div class="cta-box tilt-card scroll-reveal scale-up">
+        <h2>Ready to ship <em>real code</em>?</h2>
+        <p>Join the OpenLake community on GitHub and Matrix today. Connect with peers, find your first issue, and start building.</p>
+        <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+          <a href="https://github.com/openlake" target="_blank" class="btn btn-solid hero-btn">
+            Visit GitHub Repo &rarr;
+          </a>
+          <a href="#top" class="btn btn-ghost hero-btn">
+            Back to Top &uarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Footer -->
+    <footer class="stats">
+      <!-- Stat 1 -->
+      <div class="stat scroll-reveal from-left">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none">
+          <defs>
+            <linearGradient id="pillGradLeft" x1="3" y1="2" x2="14" y2="22" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.38"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.75"/>
+            </linearGradient>
+            <linearGradient id="pillGradRight" x1="3" y1="2" x2="14" y2="22" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.5"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.62"/>
+            </linearGradient>
+          </defs>
+          <rect x="3.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="url(#pillGradLeft)"/>
+          <rect x="13.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="url(#pillGradRight)"/>
+          <rect x="9.2" y="10.9" width="5.6" height="2.2" rx="1.1" fill="#38bdf8"/>
+        </svg>
+        <span>40+ open source projects built</span>
+      </div>
+
+      <!-- Stat 2 -->
+      <div class="stat scroll-reveal from-bottom delay-1">
+        <svg class="stat-icon" viewBox="0 0 24 24">
+          <rect x="2.4" y="2.4" width="19.2" height="19.2" rx="6.2" fill="#ffffff"/>
+          <path d="M12 7.1v7.4M8.15 12.35L12 16.2l3.85-3.85" stroke="#030712" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>100% student-led &amp; open culture</span>
+      </div>
+
+      <!-- Stat 3 -->
+      <div class="stat scroll-reveal from-right delay-2">
+        <svg class="stat-icon-wide" viewBox="0 0 40 22">
+          <circle cx="10.2" cy="11" r="9.2" fill="#0f172a"/>
+          <ellipse cx="10.2" cy="12.1" rx="4.15" ry="3.7" fill="#38bdf8"/>
+          <circle cx="9.2" cy="11.5" r="0.7" fill="#030712"/>
+          <circle cx="11.2" cy="11.5" r="0.7" fill="#030712"/>
+          <circle cx="20.2" cy="11" r="9.2" fill="#ffffff"/>
+          <circle cx="18.8" cy="10" r="1.4" fill="#030712"/>
+          <circle cx="21.6" cy="10" r="1.4" fill="#030712"/>
+          <path d="M18.5 13.5 Q20.2 15.5 21.9 13.5" stroke="#030712" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <circle cx="30.2" cy="11" r="9.2" fill="#0284c7"/>
+          <text x="30.2" y="15.1" font-weight="700" font-size="12.5" fill="#ffffff" text-anchor="middle" font-family="Inter, sans-serif">λ</text>
+        </svg>
+        <span>250+ active student contributors</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- External Modular JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
